@@ -1,0 +1,39 @@
+{
+    "name": "vanilo/shipping",
+    "description": "Vanilo Shipping Module",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["shipping", "ecommerce", "vanilo", "artkonekt", "laravel"],
+    "support": {
+        "source": "https://github.com/vanilophp/shipping"
+    },
+    "authors": [
+        {
+            "name": "Attila Fulop",
+            "homepage": "https://github.com/fulopattila122"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "konekt/concord": "~1.1",
+        "konekt/address": ">=0.9.7"
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.2 - 7.5",
+        "orchestra/testbench": "^3.4.2"
+    },
+    "autoload": {
+        "psr-4": { "Vanilo\\Shipping\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vanilo\\Shipping\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
