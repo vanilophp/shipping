@@ -29,7 +29,8 @@ class ShippingMethods
         self::$registry[$id] = $class;
     }
 
-    public static function make(string $id) {
+    public static function make(string $id)
+    {
         $className = self::getClass($id);
 
         if (null === $className) {

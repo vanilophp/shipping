@@ -14,7 +14,7 @@ class CreateShippingMethods extends Migration
     public function up()
     {
         Schema::create('shipping_methods', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('class_name');
             $table->text('options');
