@@ -8,8 +8,9 @@ class ShippingRate implements Arrayable {
     protected $price;
     protected $currency;
 
-    public function setPrice($value) {
+    public function setPrice($value, $currency = null) {
         $this->price = $value;
+        if (isset($currency)) $this->currency = $currency;
     }
 
     public function setCurrency($value) {
@@ -20,6 +21,10 @@ class ShippingRate implements Arrayable {
         return $this->price;
     }
 
+    public function getConvertedPrice() {
+        return currency($this->price, $this->currency, null, false);
+    }
+
     public function getCurrency() {
         return $this->currency;
     }
@@ -28,6 +33,9 @@ class ShippingRate implements Arrayable {
         return [
             'price' => $this->price,
             'currency' => $this->currency,
+            'converted_price' => $this->getConvertedPrice(),
+            'converted_currency' => currency()->getUserCurrency(),
+            'display_price' => currency_format($this->getConvertedPrice(), currency()->getUserCurrency()),
         ];
     }
 }
