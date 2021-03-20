@@ -1,8 +1,8 @@
 # Changelog
 
-## 1.0 Series
+## 2.x Series
 
 ### Unreleased
-##### 2019-XX-XX
+##### 2021-XX-XX
 
 - The very first release of this module

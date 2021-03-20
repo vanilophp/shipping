@@ -2,5 +2,5 @@
 
 return [
     'name'    => 'Vanilo Shipping Module',
-    'version' => '1.0-dev'
+    'version' => '2.2-dev'
 ];
