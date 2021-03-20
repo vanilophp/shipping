@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Contains the ShipmentStatus class.
  *
@@ -16,14 +18,14 @@ use Vanilo\Shipping\Contracts\ShipmentStatus as ShipmentStatusContract;
 
 class ShipmentStatus extends Enum implements ShipmentStatusContract
 {
-    const __default                 = self::NEW;
+    public const __default = self::NEW;
 
-    const NEW                       = 'new';
-    const INFO                      = 'info';
-    const PICKED_UP                 = 'picked_up';
-    const HUB_SCAN                  = 'hub_scan';
-    const OUT_FOR_DELIVERY          = 'out_for_delivery';
-    const DELIVERED_TO_PICKUP_POINT = 'delivered_to_pickup_point';
-    const DELIVERED                 = 'delivered';
-    const LOST                      = 'lost';
+    public const NEW = 'new';
+    public const INFO = 'info';
+    public const PICKED_UP = 'picked_up';
+    public const HUB_SCAN = 'hub_scan';
+    public const OUT_FOR_DELIVERY = 'out_for_delivery';
+    public const DELIVERED_TO_PICKUP_POINT = 'delivered_to_pickup_point';
+    public const DELIVERED = 'delivered';
+    public const LOST = 'lost';
 }
