@@ -20,12 +20,11 @@ use Vanilo\Shipping\Providers\ModuleServiceProvider as ShippingModule;
 
 abstract class TestCase extends Orchestra
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
         $this->setUpDatabase($this->app);
-        $this->withFactories(__DIR__ . '/factories');
     }
 
     /**
