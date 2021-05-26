@@ -15,16 +15,7 @@ class CreateShipmentsTable extends Migration
             $table->string('tracking_number')->nullable();
             $table->integer('address_id')->unsigned();
             $table->boolean('is_trackable')->default(true);
-            $table->enum('status', [
-                ShipmentStatus::NEW,
-                ShipmentStatus::INFO,
-                ShipmentStatus::PICKED_UP,
-                ShipmentStatus::HUB_SCAN,
-                ShipmentStatus::OUT_FOR_DELIVERY,
-                ShipmentStatus::DELIVERED_TO_PICKUP_POINT,
-                ShipmentStatus::DELIVERED,
-                ShipmentStatus::LOST
-            ])->default(ShipmentStatus::NEW);
+            $table->string('status')->default('new');
             $table->decimal('weight', 15, 4)->nullable();
             $table->decimal('height', 15, 4)->nullable();
             $table->decimal('width', 15, 4)->nullable();
