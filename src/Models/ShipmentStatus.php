@@ -22,6 +22,8 @@ class ShipmentStatus extends Enum implements ShipmentStatusContract
 
     public const NEW = 'new';
     public const INFO = 'info';
+    public const READY = 'ready';
+    public const CANCELLED = 'cancelled';
     public const PICKED_UP = 'picked_up';
     public const HUB_SCAN = 'hub_scan';
     public const OUT_FOR_DELIVERY = 'out_for_delivery';
